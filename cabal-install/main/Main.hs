@@ -1190,6 +1190,10 @@ userConfigAction ucflags extraArgs globalFlags = do
       else die' verbosity $ path ++ " already exists."
     ("diff":_) -> mapM_ putStrLn =<< userConfigDiff globalFlags
     ("update":_) -> userConfigUpdate verbosity globalFlags
+    ("list":_) -> undefined
+    ("set":_) -> undefined
+    ("add":_) -> undefined
+    ("remove":_) ->undefined
     -- Error handling.
     [] -> die' verbosity $ "Please specify a subcommand (see 'help user-config')"
     _  -> die' verbosity $ "Unknown 'user-config' subcommand: " ++ unwords extraArgs

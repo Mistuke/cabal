@@ -2435,10 +2435,18 @@ userConfigCommand = CommandUI {
     ++ " the default configuration that would be created by cabal if the"
     ++ " config file did not exist.\n"
     ++ "update: Applies the pseudo-diff to the configuration that would be"
-    ++ " created by default, and write the result back to ~/.cabal/config.",
+    ++ " created by default, and write the result back to ~/.cabal/config.\n"
+    ++ "list: Shows all the options that can be updated by add/set/remove and"
+    ++ "their current values.\n"
+    ++ "add: Append to the list of values for a specified key.\n"
+    ++ "set: Override an existing value for a specified key.\n",
+    ++ "remove: Remove the specified value from the option with"
+    ++ " the given key.\n",
 
   commandNotes        = Nothing,
-  commandUsage        = usageAlternatives "user-config" ["init", "diff", "update"],
+  commandUsage        = usageAlternatives "user-config" ["init", "diff", "update"
+                                                        , "list", "add", "set"
+                                                        , "remove"],
   commandDefaultFlags = mempty,
   commandOptions      = \ _ -> [
    optionVerbosity userConfigVerbosity (\v flags -> flags { userConfigVerbosity = v })

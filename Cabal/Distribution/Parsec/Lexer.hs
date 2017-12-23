@@ -257,14 +257,12 @@ alex_action_22 =  toki TokFieldLine
 alex_action_23 =  tok  OpenBrace  
 alex_action_24 =  tok  CloseBrace 
 alex_action_25 =  \_ _ _ -> adjustPos retPos >> setStartCode bol_field_braces >> lexToken 
-{-# LINE 1 "templates/GenericTemplate.hs" #-}
-{-# LINE 1 "templates/GenericTemplate.hs" #-}
+{-# LINE 1 "templates\GenericTemplate.hs" #-}
+{-# LINE 1 "templates\\GenericTemplate.hs" #-}
 {-# LINE 1 "<built-in>" #-}
 {-# LINE 1 "<command-line>" #-}
-{-# LINE 10 "<command-line>" #-}
-# 1 "/usr/include/stdc-predef.h" 1 3 4
-
-# 17 "/usr/include/stdc-predef.h" 3 4
+{-# LINE 11 "<command-line>" #-}
+{-# LINE 1 "E:\\msys64\\mingw64\\lib/include\\ghcversion.h" #-}
 
 
 
@@ -282,53 +280,8 @@ alex_action_25 =  \_ _ _ -> adjustPos retPos >> setStartCode bol_field_braces >>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{-# LINE 10 "<command-line>" #-}
-{-# LINE 1 "/opt/ghc/7.10.3/lib/ghc-7.10.3/include/ghcversion.h" #-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{-# LINE 10 "<command-line>" #-}
-{-# LINE 1 "templates/GenericTemplate.hs" #-}
+{-# LINE 11 "<command-line>" #-}
+{-# LINE 1 "templates\\GenericTemplate.hs" #-}
 -- -----------------------------------------------------------------------------
 -- ALEX TEMPLATE
 --
@@ -338,7 +291,7 @@ alex_action_25 =  \_ _ _ -> adjustPos retPos >> setStartCode bol_field_braces >>
 -- -----------------------------------------------------------------------------
 -- INTERNALS and main scanner engine
 
-{-# LINE 21 "templates/GenericTemplate.hs" #-}
+{-# LINE 21 "templates\\GenericTemplate.hs" #-}
 
 
 
@@ -352,7 +305,7 @@ alex_action_25 =  \_ _ _ -> adjustPos retPos >> setStartCode bol_field_braces >>
 #define GTE(n,m) (n >=# m)
 #define EQ(n,m) (n ==# m)
 #endif
-{-# LINE 51 "templates/GenericTemplate.hs" #-}
+{-# LINE 51 "templates\\GenericTemplate.hs" #-}
 
 
 data AlexAddr = AlexA# Addr#
@@ -488,7 +441,7 @@ alex_scan_tkn user orig_input len input s last_acc =
         check_accs (AlexAccNone) = last_acc
         check_accs (AlexAcc a  ) = AlexLastAcc a input (I# (len))
         check_accs (AlexAccSkip) = AlexLastSkip  input (I# (len))
-{-# LINE 198 "templates/GenericTemplate.hs" #-}
+{-# LINE 198 "templates\\GenericTemplate.hs" #-}
 
 data AlexLastAcc a
   = AlexNone
